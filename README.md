@@ -9,4 +9,4 @@ Electronic Design: Alex Nieva
 
 Project Sponsored by the Centre for Interdisplinary Research in Music Media and Technology [CIRMMT](http://www.cirmmt.org/)
 
-Developed at the Input Devices and Music Interaction Laboratory [IDMIL] (http://www-new.idmil.org/)
+Developed at the Input Devices and Music Interaction Laboratory [IDMIL](http://www-new.idmil.org/)
