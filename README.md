@@ -1,7 +1,7 @@
 Visual Augmented Cello Project
 ==============================
 
-This repository has the firware developed to visually augment the artistic possibilities of the Acoustic Cello.
+This repository has the firmware, schematics, and specification sheets developed to visually augment the artistic possibilities of the Acoustic Cello.
 
 Concept: Juan Sebastian Delgado & Alex Nieva
 
