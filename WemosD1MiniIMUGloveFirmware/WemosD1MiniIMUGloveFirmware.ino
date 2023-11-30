@@ -341,19 +341,18 @@ void loop()
       yaw -= -14.8; // Declination at Montreal, QC.-14.49
       roll  *= 180.0f / PI;
 
+      // OSC broadcast message to all devices in network.
       OSCMessage msg("/aknow");
-//      msg.add(outAccelBodyFrame[0]);
+//      msg.add(outAccelBodyFrame[0]);	// X acceleration raw
       msg.add(filterOneLowpassX.output()); //X acceleration low pass filtered
-      //msg.add(outAccelBodyFrame[1]); // Y acceleration raw
+      //msg.add(outAccelBodyFrame[1]); 	// Y acceleration raw
       msg.add(filterOneLowpassY.output()); //Y acceleration low pass filtered
-//      msg.add(outAccelBodyFrame[2]);
-      msg.add(filterOneLowpassZ.output()); //Z acceleration high pass filtered
-      msg.add(normAccel);
+//      msg.add(outAccelBodyFrame[2]); 	// Z acceleration raw
+      msg.add(filterOneLowpassZ.output()); //Z acceleration low pass filtered
+      msg.add(normAccel);		// Norm acceleration raw
       msg.add(filterOneLowpass.output()); // Norm acceleration low pass filtered
       msg.add(pitch);
       msg.add(roll);
-//      msg.add(filterOneHighpass.output());
-//      msg.add(bufferFromPiezo[0]); Serial.println(bufferFromPiezo[0]);
       if ((int)bufferFromPiezo[1]> 0){
         msg.add(bufferFromPiezo[0]); //Serial.println(bufferFromPiezo[0]);
       }
